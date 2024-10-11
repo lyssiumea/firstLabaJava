@@ -7,4 +7,9 @@ public class Methods {  // Задание 1. Методы
         return lastDigit + secondLastDigit;
     }
 
+    // Задача № 4. Есть ли позитив
+    public boolean isPositive(int x) {
+        return x > 0;
+    }
+
 }
