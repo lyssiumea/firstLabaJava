@@ -13,9 +13,14 @@ public class Main {
 //        System.out.println("Сумма двух последних цифр: " + result);
 
         // Задача № 4. Есть ли позитив
-        int x = validator.checkNumber("Введите целое число: ");
-        boolean result = methods.isPositive(x);
-        System.out.println("Число положительное: " + result);
+//        int x = validator.checkNumber("Введите целое число: ");
+//        boolean result = methods.isPositive(x);
+//        System.out.println("Число " + x + " положительное? : " + result);
+
+        // Задача № 6. Большая буква
+        char letter = validator.checkLetter("Введите символ (букву): ");
+        boolean result = methods.isUpperCase(letter);
+        System.out.println("Это заглавная буква: " + result);
 
     }
 }

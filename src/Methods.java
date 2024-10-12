@@ -12,4 +12,10 @@ public class Methods {  // Задание 1. Методы
         return x > 0;
     }
 
+    // Задача № 6. Большая буква
+    public boolean isUpperCase(char x) {
+        return (x >= 'A' && x <= 'Z') || (x >= 'А' && x <= 'Я');
+    }
+
+
 }

@@ -32,5 +32,22 @@ public class CheckInput {   // Метод со всеми проверками
         return number;
     }
 
+    public char checkLetter(String prompt) {    // один символ и это буква
+        char letter;
+        while (true) {
+            System.out.print(prompt);
+            String input = scanner.nextLine();
+            if (input.length() == 1 && Character.isLetter(input.charAt(0))) {
+                letter = input.charAt(0);
+                break;
+            } else if (input.length() != 1) {
+                System.out.println("Ошибка: введите ровно один символ.");
+            } else if (!Character.isLetter(input.charAt(0))) {
+                System.out.println("Ошибка: введите букву, а не цифру или другой символ.");
+            }
+        }
+        return letter;
+    }
+
 
 }
