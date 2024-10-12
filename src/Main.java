@@ -40,10 +40,16 @@ public class Main {
         Conditions conditions = new Conditions();   // Задание 2. Условия
 
         // Задача № 2. Безопасное деление
-        int x = validator.checkNumber("Введите делимое (x): ");
-        int y = validator.checkNumber("Введите делитель (y): ");
-        double result = conditions.safeDiv(x, y);
-        System.out.println("Результат деления: " + result);
+//        int x = validator.checkNumber("Введите делимое (x): ");
+//        int y = validator.checkNumber("Введите делитель (y): ");
+//        double result = conditions.safeDiv(x, y);
+//        System.out.println("Результат деления: " + result);
+
+        // Задача № 4. Строка сравнения.
+        int x = validator.checkNumber("Введите первое целое число: ");
+        int y = validator.checkNumber("Введите второе целое число: ");
+        String decision = conditions.makeDecision(x, y);
+        System.out.println(decision);
 
 
     }

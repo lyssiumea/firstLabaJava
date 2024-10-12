@@ -8,5 +8,18 @@ public class Conditions {   // Задание 2. Условия
         return (double) x / y; // Иначе выполняем деление
     }
 
+    // Задача № 4. Строка сравнения.
+    public String makeDecision(int x, int y) {
+        String result;
+        if (x > y) {
+            result = x + " > " + y;
+        } else if (x < y) {
+            result = x + " < " + y;
+        } else {
+            result = x + " == " + y;
+        }
+        return result;
+    }
+
 
 }
