@@ -17,5 +17,10 @@ public class Methods {  // Задание 1. Методы
         return (x >= 'A' && x <= 'Z') || (x >= 'А' && x <= 'Я');
     }
 
+    // Задача № 8. Делитель
+    public boolean isDivisor(int a, int b) {
+        return (a != 0 && b % a == 0) || (b != 0 && a % b == 0);
+    }
+
 
 }

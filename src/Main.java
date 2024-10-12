@@ -18,9 +18,16 @@ public class Main {
 //        System.out.println("Число " + x + " положительное? : " + result);
 
         // Задача № 6. Большая буква
-        char letter = validator.checkLetter("Введите символ (букву): ");
-        boolean result = methods.isUpperCase(letter);
-        System.out.println("Это заглавная буква: " + result);
+//        char letter = validator.checkLetter("Введите символ (букву): ");
+//        boolean result = methods.isUpperCase(letter);
+//        System.out.println("Это заглавная буква: " + result);
+
+        // Задача № 8. Делитель
+        int a = validator.checkNumber("Введите первое целое число (a): ");
+        int b = validator.checkNumber("Введите второе целое число (b): ");
+        boolean result = methods.isDivisor(a, b);
+        System.out.println("Одно из чисел делит другое: " + result);
+
 
     }
 }
