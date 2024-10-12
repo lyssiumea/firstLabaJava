@@ -23,10 +23,19 @@ public class Main {
 //        System.out.println("Это заглавная буква: " + result);
 
         // Задача № 8. Делитель
-        int a = validator.checkNumber("Введите первое целое число (a): ");
-        int b = validator.checkNumber("Введите второе целое число (b): ");
-        boolean result = methods.isDivisor(a, b);
-        System.out.println("Одно из чисел делит другое: " + result);
+//        int a = validator.checkNumber("Введите первое целое число (a): ");
+//        int b = validator.checkNumber("Введите второе целое число (b): ");
+//        boolean result = methods.isDivisor(a, b);
+//        System.out.println("Одно из чисел делит другое: " + result);
+
+        // Задача № 10. Многократный вызов
+        int sum = validator.checkNumber("Введите первое число: ");
+        for (int i = 2; i <= 5; i++) {
+            int nextNumber = validator.checkNumber("Введите число #" + i + ": ");
+            sum = methods.lastNumSum(sum, nextNumber); // cложение разрядов единиц
+            System.out.println("Текущая сумма разрядов единиц: " + sum);
+        }
+        System.out.println("Итоговый результат: " + sum);
 
 
     }

@@ -22,5 +22,12 @@ public class Methods {  // Задание 1. Методы
         return (a != 0 && b % a == 0) || (b != 0 && a % b == 0);
     }
 
+    // Задача № 10. Многократный вызов
+    public int lastNumSum(int a, int b) {
+        int lastNumA = Math.abs(a % 10);
+        int lastNumB = Math.abs(b % 10);
+        return lastNumA + lastNumB;
+    }
+
 
 }
