@@ -29,13 +29,21 @@ public class Main {
 //        System.out.println("Одно из чисел делит другое: " + result);
 
         // Задача № 10. Многократный вызов
-        int sum = validator.checkNumber("Введите первое число: ");
-        for (int i = 2; i <= 5; i++) {
-            int nextNumber = validator.checkNumber("Введите число #" + i + ": ");
-            sum = methods.lastNumSum(sum, nextNumber); // cложение разрядов единиц
-            System.out.println("Текущая сумма разрядов единиц: " + sum);
-        }
-        System.out.println("Итоговый результат: " + sum);
+//        int sum = validator.checkNumber("Введите первое число: ");
+//        for (int i = 2; i <= 5; i++) {
+//            int nextNumber = validator.checkNumber("Введите число #" + i + ": ");
+//            sum = methods.lastNumSum(sum, nextNumber); // cложение разрядов единиц
+//            System.out.println("Текущая сумма разрядов единиц: " + sum);
+//        }
+//        System.out.println("Итоговый результат: " + sum);
+
+        Conditions conditions = new Conditions();   // Задание 2. Условия
+
+        // Задача № 2. Безопасное деление
+        int x = validator.checkNumber("Введите делимое (x): ");
+        int y = validator.checkNumber("Введите делитель (y): ");
+        double result = conditions.safeDiv(x, y);
+        System.out.println("Результат деления: " + result);
 
 
     }
