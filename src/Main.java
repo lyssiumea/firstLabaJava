@@ -64,9 +64,15 @@ public class Main {
 //        System.out.println("Результат: " + result);
 
         // Задача № 10. Вызов дней недели
-        String day = validator.checkString("Введите название дня недели: ");
-        conditions.printDays(day);
+//        String day = validator.checkString("Введите название дня недели: ");
+//        conditions.printDays(day);
 
+        Cycles cycles = new Cycles();   // Задание 3. Циклы
+
+        // Задача № 2. Числа наоборот
+        int number = validator.checkNumber("Введите целое число: ");
+        String reversedNumbers = cycles.reverseListNums(number);
+        System.out.println(reversedNumbers);
 
     }
 }
