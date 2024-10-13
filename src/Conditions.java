@@ -41,5 +41,29 @@ public class Conditions {   // Задание 2. Условия
         }
     }
 
+    // Задача № 10. Вызов дней недели
+    public void printDays(String x) {
+        x = x.toLowerCase();    // приводим строку к нижнему регистру для корректного сравнения
+        switch (x) {
+            case "понедельник":
+                System.out.println("Понедельник");
+            case "вторник":
+                System.out.println("Вторник");
+            case "среда":
+                System.out.println("Среда");
+            case "четверг":
+                System.out.println("Четверг");
+            case "пятница":
+                System.out.println("Пятница");
+            case "суббота":
+                System.out.println("Суббота");
+            case "воскресенье":
+                System.out.println("Воскресенье");
+                break;
+            default:
+                System.out.println("Это не день недели");
+        }
+    }
+
 
 }

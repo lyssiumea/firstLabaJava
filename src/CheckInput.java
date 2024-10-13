@@ -32,21 +32,33 @@ public class CheckInput {   // Метод со всеми проверками
         return number;
     }
 
-    public char checkLetter(String prompt) {    // один символ и это буква
+    public char checkLetter(String prompt) {  // только 1 символ буква
         char letter;
         while (true) {
             System.out.print(prompt);
-            String input = scanner.nextLine();
+            String input = scanner.nextLine().trim();
             if (input.length() == 1 && Character.isLetter(input.charAt(0))) {
-                letter = input.charAt(0);
+                letter = input.charAt(0); // Возвращаем символ, если это буква
                 break;
             } else if (input.length() != 1) {
                 System.out.println("Ошибка: введите ровно один символ.");
-            } else if (!Character.isLetter(input.charAt(0))) {
+            } else {
                 System.out.println("Ошибка: введите букву, а не цифру или другой символ.");
             }
         }
         return letter;
+    }
+
+    public String checkString(String prompt) {    // проверка строки
+        while (true) {
+            System.out.print(prompt);
+            String input = scanner.nextLine().trim();
+            if (input.matches("[a-zA-Zа-яА-Я]+")) {
+                return input;
+            } else {
+                System.out.println("Ошибка: ввод должен содержать только буквы. Попробуйте снова.");
+            }
+        }
     }
 
 

@@ -59,9 +59,13 @@ public class Main {
 //        System.out.println("Результат: " + result);
 
         // Задача № 8.Возраст
-        int age = validator.checkNumber("Введите возраст: ");
-        String result = conditions.age(age);
-        System.out.println("Результат: " + result);
+//        int age = validator.checkNumber("Введите возраст: ");
+//        String result = conditions.age(age);
+//        System.out.println("Результат: " + result);
+
+        // Задача № 10. Вызов дней недели
+        String day = validator.checkString("Введите название дня недели: ");
+        conditions.printDays(day);
 
 
     }
