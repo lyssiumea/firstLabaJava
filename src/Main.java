@@ -52,10 +52,15 @@ public class Main {
 //        System.out.println(decision);
 
         // Задача № 6. Тройная сумма
-        int x = validator.checkNumber("Введите первое целое число: ");
-        int y = validator.checkNumber("Введите второе целое число: ");
-        int z = validator.checkNumber("Введите третье целое число: ");
-        boolean result = conditions.sum3(x, y, z);
+//        int x = validator.checkNumber("Введите первое целое число: ");
+//        int y = validator.checkNumber("Введите второе целое число: ");
+//        int z = validator.checkNumber("Введите третье целое число: ");
+//        boolean result = conditions.sum3(x, y, z);
+//        System.out.println("Результат: " + result);
+
+        // Задача № 8.Возраст
+        int age = validator.checkNumber("Введите возраст: ");
+        String result = conditions.age(age);
         System.out.println("Результат: " + result);
 
 
