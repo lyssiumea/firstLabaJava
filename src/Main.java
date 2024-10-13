@@ -46,10 +46,17 @@ public class Main {
 //        System.out.println("Результат деления: " + result);
 
         // Задача № 4. Строка сравнения.
+//        int x = validator.checkNumber("Введите первое целое число: ");
+//        int y = validator.checkNumber("Введите второе целое число: ");
+//        String decision = conditions.makeDecision(x, y);
+//        System.out.println(decision);
+
+        // Задача № 6. Тройная сумма
         int x = validator.checkNumber("Введите первое целое число: ");
         int y = validator.checkNumber("Введите второе целое число: ");
-        String decision = conditions.makeDecision(x, y);
-        System.out.println(decision);
+        int z = validator.checkNumber("Введите третье целое число: ");
+        boolean result = conditions.sum3(x, y, z);
+        System.out.println("Результат: " + result);
 
 
     }
