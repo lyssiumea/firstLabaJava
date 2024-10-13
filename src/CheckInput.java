@@ -61,5 +61,4 @@ public class CheckInput {   // Метод со всеми проверками
         }
     }
 
-
 }

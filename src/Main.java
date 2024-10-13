@@ -70,9 +70,17 @@ public class Main {
         Cycles cycles = new Cycles();   // Задание 3. Циклы
 
         // Задача № 2. Числа наоборот
-        int number = validator.checkNumber("Введите целое число: ");
-        String reversedNumbers = cycles.reverseListNums(number);
-        System.out.println(reversedNumbers);
+//        int number = validator.checkNumber("Введите целое число: ");
+//        String reversedNumbers = cycles.reverseListNums(number);
+//        System.out.println(reversedNumbers);
+
+        // Задача № 4. Степень числа.
+        int base = validator.checkNumber("Введите число (основание): ");
+        int exponent = validator.checkNumber("Введите степень (может быть и отрицательной): ");
+        double result = cycles.pow(base, exponent);
+        System.out.println(base + " в степени " + exponent + " = " + result);
+
+
 
     }
 }

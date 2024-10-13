@@ -16,4 +16,19 @@ public class Cycles {   // Задание 3. Циклы
         return result.toString().trim(); // убираем последний лишний пробел
     }
 
+    // Задача № 4. Степень числа.
+    public double pow(int x, int y) {
+        double result = 1;
+        int absY = Math.abs(y);
+        for (int i = 0; i < absY; i++) {
+            result *= x;  // умножаем результат на x absY раз
+        }
+        if (y < 0) {
+            result = 1 / result;
+        }
+        return result;
+    }
+
+
+
 }
