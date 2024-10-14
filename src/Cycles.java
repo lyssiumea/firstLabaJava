@@ -46,6 +46,10 @@ public class Cycles {   // Задание 3. Циклы
 
     // Задача № 8. Левый треугольник.
     public void leftTriangle(int x) {
+        if (x <= 0) {
+            System.out.println("Ошибка: введите положительное число для высоты треугольника.");
+            return;
+        }
         for (int i = 1; i <= x; i++) {
             for (int j = 1; j <= i; j++) {
                 System.out.print("*");
