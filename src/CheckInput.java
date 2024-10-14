@@ -75,7 +75,7 @@ public class CheckInput {   // Метод со всеми проверками
                 }
             } else {
                 System.out.println("Ошибка: введите корректное целое число. Попробуйте снова.");
-                scanner.next(); // очищаем некорректный ввод
+                scanner.next();
             }
         }
         return number;
