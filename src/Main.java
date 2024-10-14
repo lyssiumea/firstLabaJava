@@ -81,11 +81,13 @@ public class Main {
 //        System.out.println(base + " в степени " + exponent + " = " + result);
 
         // Задача № 6. Одинаковость
-        int number = validator.checkNumber("Введите число: ");
-        boolean result = cycles.equalNum(number);
-        System.out.println("Все цифры числа одинаковы: " + result);
+//        int number = validator.checkNumber("Введите число: ");
+//        boolean result = cycles.equalNum(number);
+//        System.out.println("Все цифры числа одинаковы: " + result);
 
-
+        // Задача № 8. Левый треугольник.
+        int x = validator.checkPositiveNumber("Введите высоту треугольника: ");
+        cycles.leftTriangle(x);
 
     }
 }

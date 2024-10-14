@@ -61,4 +61,25 @@ public class CheckInput {   // Метод со всеми проверками
         }
     }
 
+    public int checkPositiveNumber(String prompt) { // проверка что число положительное
+        Scanner scanner = new Scanner(System.in);
+        int number;
+        while (true) {
+            System.out.print(prompt);
+            if (scanner.hasNextInt()) {
+                number = scanner.nextInt();
+                if (number > 0) {
+                    break;
+                } else {
+                    System.out.println("Ошибка: число должно быть положительным. Попробуйте снова.");
+                }
+            } else {
+                System.out.println("Ошибка: введите корректное целое число. Попробуйте снова.");
+                scanner.next(); // очищаем некорректный ввод
+            }
+        }
+        return number;
+    }
+
+
 }
