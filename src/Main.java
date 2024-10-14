@@ -75,10 +75,15 @@ public class Main {
 //        System.out.println(reversedNumbers);
 
         // Задача № 4. Степень числа.
-        int base = validator.checkNumber("Введите число (основание): ");
-        int exponent = validator.checkNumber("Введите степень (может быть и отрицательной): ");
-        double result = cycles.pow(base, exponent);
-        System.out.println(base + " в степени " + exponent + " = " + result);
+//        int base = validator.checkNumber("Введите число (основание): ");
+//        int exponent = validator.checkNumber("Введите степень (может быть и отрицательной): ");
+//        double result = cycles.pow(base, exponent);
+//        System.out.println(base + " в степени " + exponent + " = " + result);
+
+        // Задача № 6. Одинаковость
+        int number = validator.checkNumber("Введите число: ");
+        boolean result = cycles.equalNum(number);
+        System.out.println("Все цифры числа одинаковы: " + result);
 
 
 

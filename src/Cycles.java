@@ -29,6 +29,20 @@ public class Cycles {   // Задание 3. Циклы
         return result;
     }
 
+    // Задача № 6. Одинаковость
+    public boolean equalNum(int x) {
+        x = Math.abs(x);  // игноририруем знак
+        int lastDigit = x % 10;
+        x /= 10;
+        while (x > 0) {
+            int currentDigit = x % 10;
+            if (currentDigit != lastDigit) {
+                return false;
+            }
+            x /= 10;
+        }
+        return true;
+    }
 
 
 }
