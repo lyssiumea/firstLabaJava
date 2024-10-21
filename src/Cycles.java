@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Cycles {   // Задание 3. Циклы
 
     // Задача № 2. Числа наоборот
@@ -53,6 +55,19 @@ public class Cycles {   // Задание 3. Циклы
             System.out.println();
         }
     }
+
+    // Задача № 10. Угадайка
+    public int guessGame(int userGuess, int targetNumber, int attempts) {
+        attempts++;
+        if (userGuess == targetNumber) {
+            System.out.println("Вы угадали! Число было " + targetNumber + ". Вы отгадали число за " + attempts + " попыток.");
+            return attempts;
+        } else {
+            System.out.println("Вы не угадали, попробуйте еще раз.");
+            return -1;
+        }
+    }
+
 
 
 }

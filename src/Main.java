@@ -1,5 +1,6 @@
 import static java.lang.System.out;
 import java.util.Scanner;
+import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
@@ -86,8 +87,35 @@ public class Main {
 //        System.out.println("Все цифры числа одинаковы: " + result);
 
         // Задача № 8. Левый треугольник.
-        int x = validator.checkPositiveNumber("Введите высоту треугольника: ");
-        cycles.leftTriangle(x);
+//        int x = validator.checkPositiveNumber("Введите высоту треугольника: ");
+//        cycles.leftTriangle(x);
+
+        // Задача № 10. Угадайка
+//        Random random = new Random();
+//        int targetNumber = random.nextInt(10);
+//        int attempts = 0;
+//        int result = -1;
+//        while (result == -1) {
+//            int userGuess = validator.checkNumberInRange("Введите число от 0 до 9: ", 0, 9);
+//            result = cycles.guessGame(userGuess, targetNumber, attempts);
+//            if (result != -1) {
+//                break;
+//            }
+//            attempts++;
+//        }
+
+        Arrays arrays = new Arrays();   // Задание 4. Массивы
+
+        // Задача № 2. Поиск последнего значения.
+        int[] arr = validator.checkArray("Введите элементы массива через пробел (только положительные числа): ");
+        int x = validator.checkPositiveNumber("Введите число для поиска в массиве: ");
+        int result = arrays.findLast(arr, x);
+        if (result != -1) {
+            System.out.println("Последнее вхождение числа " + x + " находится на индексе: " + result);
+        } else {
+            System.out.println("Число " + x + " не найдено в массиве.");
+        }
+
 
 
     }

@@ -61,7 +61,7 @@ public class CheckInput {   // Метод со всеми проверками
         }
     }
 
-    public int checkPositiveNumber(String prompt) {
+    public int checkPositiveNumber(String prompt) { // проверка что число положительное
         Scanner scanner = new Scanner(System.in);
         int number;
         while (true) {
@@ -80,6 +80,44 @@ public class CheckInput {   // Метод со всеми проверками
         }
         return number;
     }
+
+    public int checkNumberInRange(String prompt, int min, int max) {    // проверка чисел в диапазоне
+        int number;
+        while (true) {
+            number = checkNumber(prompt);
+            if (number >= min && number <= max) {
+                break;
+            } else {
+                System.out.println("Ошибка: введите число в диапазоне от " + min + " до " + max + ".");
+            }
+        }
+        return number;
+    }
+
+    public int[] checkArray(String prompt) {    // проверка что числа целые положительные в массиве
+        int[] array = null;
+        while (true) {
+            System.out.print(prompt);
+            String input = scanner.nextLine();
+            String[] elements = input.split(" ");
+            try {
+                array = new int[elements.length];
+                for (int i = 0; i < elements.length; i++) {
+                    array[i] = Integer.parseInt(elements[i]);
+                    if (array[i] < 0) {
+                        throw new IllegalArgumentException("Ошибка: все числа должны быть положительными.");
+                    }
+                }
+                break;
+            } catch (NumberFormatException e) {
+                System.out.println("Ошибка: введите только целые числа.");
+            } catch (IllegalArgumentException e) {
+                System.out.println(e.getMessage());
+            }
+        }
+        return array;
+    }
+
 
 
 }
