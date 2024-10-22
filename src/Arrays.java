@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Arrays {   // Задание 4. Массивы
 
     // Задача № 2. Поиск последнего значения.
@@ -50,6 +52,17 @@ public class Arrays {   // Задание 4. Массивы
             result[arr1.length + i] = arr2[i];
         }
         return result;
+    }
+
+    // Задача № 10. Удалить негатив.
+    public int[] deleteNegative(int[] arr) {
+        ArrayList<Integer> positiveNumbers = new ArrayList<>();
+        for (int num : arr) {
+            if (num >= 0) {
+                positiveNumbers.add(num);
+            }
+        }
+        return positiveNumbers.stream().mapToInt(i -> i).toArray();
     }
 
 

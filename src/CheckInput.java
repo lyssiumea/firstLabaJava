@@ -126,4 +126,29 @@ public class CheckInput {   // Метод со всеми проверками
         }
     }
 
+    public int[] checkArrayInput(String prompt) { // проверка каждого элемента (допуск отриц чисел)
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            System.out.print(prompt);
+            String input = scanner.nextLine();
+            String[] inputs = input.split(" ");
+            int[] arr = new int[inputs.length];
+            boolean validInput = true;
+            for (int i = 0; i < inputs.length; i++) {
+                try {
+                    arr[i] = Integer.parseInt(inputs[i]);
+                } catch (NumberFormatException e) {
+                    validInput = false;
+                    break;
+                }
+            }
+            if (validInput) {
+                return arr;
+            } else {
+                System.out.println("Ошибка: введите корректные целые числа, разделенные пробелами.");
+            }
+        }
+
+    }
+
 }

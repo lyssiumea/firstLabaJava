@@ -1,12 +1,14 @@
 import static java.lang.System.out;
 import java.util.Scanner;
 import java.util.Random;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        CheckInput validator = new CheckInput(); // все проверки
 
-        Methods methods = new Methods();
-        CheckInput validator = new CheckInput();
+        Methods methods = new Methods(); // Задание 1. Методы
 
         // Задача № 2. Сумма знаков
 //        int x = validator.checkNumberWithTwoDigits("Введите число с минимум двумя цифрами: ");
@@ -130,13 +132,19 @@ public class Main {
 //        System.out.println("Массив после реверса: " + java.util.Arrays.toString(arr));
 
         // Задача № 8. Объединение
-        int[] arr1 = validator.checkArray("Введите элементы первого массива, разделенные пробелами: ");
-        int[] arr2 = validator.checkArray("Введите элементы второго массива, разделенные пробелами: ");
-        int[] result = arrays.concat(arr1, arr2);
-        System.out.println("Результат объединения массивов: ");
-        for (int num : result) {
-            System.out.print(num + " ");
-        }
+//        int[] arr1 = validator.checkArray("Введите элементы первого массива, разделенные пробелами: ");
+//        int[] arr2 = validator.checkArray("Введите элементы второго массива, разделенные пробелами: ");
+//        int[] result = arrays.concat(arr1, arr2);
+//        System.out.println("Результат объединения массивов: ");
+//        for (int num : result) {
+//            System.out.print(num + " ");
+//        }
+
+        // Задача № 10. Удалить негатив.
+        int[] arr = validator.checkArrayInput("Введите массив целых чисел, разделенный пробелами: ");
+        int[] result = arrays.deleteNegative(arr);
+        System.out.print("Массив после удаления отрицательных чисел: ");
+        System.out.println(java.util.Arrays.toString(result));
 
 
     }
