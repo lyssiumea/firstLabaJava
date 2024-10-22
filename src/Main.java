@@ -107,15 +107,22 @@ public class Main {
         Arrays arrays = new Arrays();   // Задание 4. Массивы
 
         // Задача № 2. Поиск последнего значения.
-        int[] arr = validator.checkArray("Введите элементы массива через пробел (только положительные числа): ");
-        int x = validator.checkPositiveNumber("Введите число для поиска в массиве: ");
-        int result = arrays.findLast(arr, x);
-        if (result != -1) {
-            System.out.println("Последнее вхождение числа " + x + " находится на индексе: " + result);
-        } else {
-            System.out.println("Число " + x + " не найдено в массиве.");
-        }
+//        int[] arr = validator.checkArray("Введите элементы массива через пробел (только положительные числа): ");
+//        int x = validator.checkPositiveNumber("Введите число для поиска в массиве: ");
+//        int result = arrays.findLast(arr, x);
+//        if (result != -1) {
+//            System.out.println("Последнее вхождение числа " + x + " находится на индексе: " + result);
+//        } else {
+//            System.out.println("Число " + x + " не найдено в массиве.");
+//        }
 
+        // Задача № 4. Добавление в массив.
+        //int[] arr = {1, 2, 3, 4, 5};
+        int[] arr = validator.checkArray("Введите массив целых чисел (через пробел): ");
+        int x = validator.checkPositiveNumber("Введите число для вставки: ");
+        int pos = validator.checkPositiveNumber("Введите позицию для вставки: ");
+        int[] newArr = arrays.add(arr, x, pos);
+        System.out.println("Новый массив: " + java.util.Arrays.toString(newArr));
 
 
     }

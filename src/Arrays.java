@@ -10,4 +10,20 @@ public class Arrays {   // Задание 4. Массивы
         return -1;
     }
 
+    // Задача № 4. Добавление в массив.
+    public int[] add(int[] arr, int x, int pos) {
+        if (pos < 0 || pos > arr.length) {
+            throw new IllegalArgumentException("Ошибка: Позиция за пределами массива.");
+        }
+        int[] newArr = new int[arr.length + 1];
+        for (int i = 0, j = 0; i < newArr.length; i++) {
+            if (i == pos) {
+                newArr[i] = x;  // Вставка нового элемента
+            } else {
+                newArr[i] = arr[j];  // Копирование элементов исходного массива
+                j++;
+            }
+        }
+        return newArr;
+    }
 }
