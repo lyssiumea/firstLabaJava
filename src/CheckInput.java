@@ -118,6 +118,12 @@ public class CheckInput {   // Метод со всеми проверками
         return array;
     }
 
-
+    public void checkArrayForNegative(int[] arr) {  // только что положительные
+        for (int num : arr) {
+            if (num < 0) {
+                throw new IllegalArgumentException("Ошибка: массив содержит отрицательное число.");
+            }
+        }
+    }
 
 }

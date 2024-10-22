@@ -4,7 +4,7 @@ public class Arrays {   // Задание 4. Массивы
     public int findLast(int[] arr, int x) {
         for (int i = arr.length - 1; i >= 0; i--) {
             if (arr[i] == x) {
-                return i;  // Возвращаем индекс, если нашли точное совпадение с x
+                return i;
             }
         }
         return -1;
@@ -18,9 +18,9 @@ public class Arrays {   // Задание 4. Массивы
         int[] newArr = new int[arr.length + 1];
         for (int i = 0, j = 0; i < newArr.length; i++) {
             if (i == pos) {
-                newArr[i] = x;  // Вставка нового элемента
+                newArr[i] = x;
             } else {
-                newArr[i] = arr[j];  // Копирование элементов исходного массива
+                newArr[i] = arr[j];
                 j++;
             }
         }
@@ -39,5 +39,18 @@ public class Arrays {   // Задание 4. Массивы
             end--;
         }
     }
+
+    // Задача № 8. Объединение
+    public int[] concat(int[] arr1, int[] arr2) {
+        int[] result = new int[arr1.length + arr2.length];
+        for (int i = 0; i < arr1.length; i++) {
+            result[i] = arr1[i];
+        }
+        for (int i = 0; i < arr2.length; i++) {
+            result[arr1.length + i] = arr2[i];
+        }
+        return result;
+    }
+
 
 }

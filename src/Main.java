@@ -125,9 +125,18 @@ public class Main {
 //        System.out.println("Новый массив: " + java.util.Arrays.toString(newArr));
 
         // Задача № 6. Реверс
-        int[] arr = validator.checkArray("Введите массив положительных чисел через пробел: ");
-        arrays.reverse(arr);
-        System.out.println("Массив после реверса: " + java.util.Arrays.toString(arr));
+//        int[] arr = validator.checkArray("Введите массив положительных чисел через пробел: ");
+//        arrays.reverse(arr);
+//        System.out.println("Массив после реверса: " + java.util.Arrays.toString(arr));
+
+        // Задача № 8. Объединение
+        int[] arr1 = validator.checkArray("Введите элементы первого массива, разделенные пробелами: ");
+        int[] arr2 = validator.checkArray("Введите элементы второго массива, разделенные пробелами: ");
+        int[] result = arrays.concat(arr1, arr2);
+        System.out.println("Результат объединения массивов: ");
+        for (int num : result) {
+            System.out.print(num + " ");
+        }
 
 
     }
