@@ -117,12 +117,17 @@ public class Main {
 //        }
 
         // Задача № 4. Добавление в массив.
-        //int[] arr = {1, 2, 3, 4, 5};
-        int[] arr = validator.checkArray("Введите массив целых чисел (через пробел): ");
-        int x = validator.checkPositiveNumber("Введите число для вставки: ");
-        int pos = validator.checkPositiveNumber("Введите позицию для вставки: ");
-        int[] newArr = arrays.add(arr, x, pos);
-        System.out.println("Новый массив: " + java.util.Arrays.toString(newArr));
+//        //int[] arr = {1, 2, 3, 4, 5};
+//        int[] arr = validator.checkArray("Введите массив целых чисел (через пробел): ");
+//        int x = validator.checkPositiveNumber("Введите число для вставки: ");
+//        int pos = validator.checkPositiveNumber("Введите позицию для вставки: ");
+//        int[] newArr = arrays.add(arr, x, pos);
+//        System.out.println("Новый массив: " + java.util.Arrays.toString(newArr));
+
+        // Задача № 6. Реверс
+        int[] arr = validator.checkArray("Введите массив положительных чисел через пробел: ");
+        arrays.reverse(arr);
+        System.out.println("Массив после реверса: " + java.util.Arrays.toString(arr));
 
 
     }
