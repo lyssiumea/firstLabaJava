@@ -1,7 +1,4 @@
-import static java.lang.System.out;
 import java.util.Scanner;
-import java.util.Random;
-import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
@@ -141,7 +138,7 @@ public class Main {
 //        }
 
         // Задача № 10. Удалить негатив.
-        int[] arr = validator.checkArrayInput("Введите массив целых чисел, разделенный пробелами: ");
+        int[] arr = validator.checkArrayWithNegative("Введите массив целых чисел, разделенный пробелами: ");
         int[] result = arrays.deleteNegative(arr);
         System.out.print("Массив после удаления отрицательных чисел: ");
         System.out.println(java.util.Arrays.toString(result));

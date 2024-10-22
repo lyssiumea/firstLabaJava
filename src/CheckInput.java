@@ -126,7 +126,7 @@ public class CheckInput {   // Метод со всеми проверками
         }
     }
 
-    public int[] checkArrayInput(String prompt) { // проверка каждого элемента (допуск отриц чисел)
+    public int[] checkArrayWithNegative(String prompt) { // проверка каждого элемента (допуск отриц чисел)
         Scanner scanner = new Scanner(System.in);
         while (true) {
             System.out.print(prompt);
